@@ -1,5 +1,4 @@
-{
-  "subjects": [
+ [
     {
       "name": "General Knowledge",
       "icon": "🌍",
@@ -31,4 +30,3 @@
       "max_marks": 20
     }
   ]
-}
