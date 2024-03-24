@@ -1,0 +1,34 @@
+{
+  "subjects": [
+    {
+      "name": "General Knowledge",
+      "icon": "🌍",
+      "max_marks": 20
+    },
+    {
+      "name": "General Hindi",
+      "icon": "📖",
+      "max_marks": 20
+    },
+    {
+      "name": "Numerical & Mental Ability",
+      "icon": "🧮",
+      "max_marks": 20
+    },
+    {
+      "name": "Reasoning",
+      "icon": "🧠",
+      "max_marks": 20
+    },
+    {
+      "name": "Current Affairs",
+      "icon": "📰",
+      "max_marks": 20
+    },
+    {
+      "name": "General Science",
+      "icon": "🔬",
+      "max_marks": 20
+    }
+  ]
+}
