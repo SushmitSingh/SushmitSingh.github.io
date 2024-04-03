@@ -1,38 +1,68 @@
 [
-  {
-    "id": 1,
-    "name": "General Knowledge",
-    "icon": "🌍",
-    "max_marks": 20
-  },
-  {
-    "id": 2,
-    "name": "General Hindi",
-    "icon": "📖",
-    "max_marks": 20
-  },
-  {
-    "id": 3,
-    "name": "Numerical & Mental Ability",
-    "icon": "🧮",
-    "max_marks": 20
-  },
-  {
-    "id": 4,
-    "name": "Reasoning",
-    "icon": "🧠",
-    "max_marks": 20
-  },
-  {
-    "id": 5,
-    "name": "Current Affairs",
-    "icon": "📰",
-    "max_marks": 20
-  },
-  {
-    "id": 6,
-    "name": "General Science",
-    "icon": "🔬",
-    "max_marks": 20
-  }
-]
+    {
+      "id": 1,
+      "name": "General Knowledge",
+      "description": "Indian history, geography, polity, economy, science, current affairs",
+      "reading": "https://vajiramandravi.com/upsc-ias-exam/ncert-books-for-upsc/"
+    },
+    {
+      "id": 2,
+      "name": "General Hindi/Local Language",
+      "description": "Language proficiency in Hindi or local language",
+      "reading": "https://www.amazon.in/hindi-grammar-books/s?k=hindi+grammar+books (local language resource)"
+    },
+    {
+      "id": 3,
+      "name": "Numerical & Mental Ability",
+      "description": "Numbers (arithmetic, percentages, ratios) & logical reasoning",
+      "reading": "https://www.amazon.in/Agarwal-verbal-non-reasoning-book/dp/B07WCZ7MJ7 (Mental Ability practice tests)"
+    },
+    {
+      "id": 4,
+      "name": "Reasoning",
+      "description": "Analytical, verbal, and non-verbal reasoning skills",
+      "reading": "Same as Numerical & Mental Ability"
+    },
+    {
+      "id": 5,
+      "name": "Current Affairs",
+      "description": "National & international news and events",
+      "reading": "Newspapers, news websites, government publications"
+    },
+    {
+      "id": 6,
+      "name": "General Science",
+      "description": "Basic Physics, Chemistry, and Biology",
+      "reading": "https://ncert.nic.in/ (NCERT Class 10 Science book)"
+    },
+    {
+      "id": 7,
+      "name": "Indian History",
+      "description": "Important events, periods, and figures",
+      "reading": "https://ncert.nic.in/ (Indian history reference books)"
+    },
+    {
+      "id": 8,
+      "name": "Indian Geography",
+      "description": "States, rivers, mountains, etc.",
+      "reading": "https://ncert.nic.in/ (Indian geography reference books)"
+    },
+    {
+      "id": 9,
+      "name": "Indian Polity",
+      "description": "Constitution, government structure, political system",
+      "reading": "https://www.amazon.in/indian-polity-by-laxmikanth/s?k=indian+polity+by+laxmikanth (Constitution of India)"
+    },
+    {
+      "id": 10,
+      "name": "Indian Economy",
+      "description": "Basic concepts & current affairs",
+      "reading": "https://www.amazon.com/Sanjeev-Sanyal/e/B001NV0VCW (Government economic reports & news)"
+    },
+    {
+      "id": 11,
+      "name": "Indian Culture",
+      "description": "Traditions, festivals, and heritage",
+      "reading": "https://www.amazon.in/Cultural-Heritage-India-Haridas-Bhattacharyya/dp/8187332050 (Websites on Indian culture)"
+    }
+  ]
