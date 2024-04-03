@@ -3,66 +3,66 @@
       "id": 1,
       "name": "General Knowledge",
       "description": "Indian history, geography, polity, economy, science, current affairs",
-      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/gk.png"
+      "icon": "https://raw.githubusercontent.com/SushmitSingh/SushmitSingh.github.io/main/gk.png"
     },
     {
       "id": 2,
       "name": "General Hindi/Local Language",
       "description": "Language proficiency in Hindi or local language",
-      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com (6).png"
+      "icon": "https://raw.githubusercontent.com/SushmitSingh/SushmitSingh.github.io/main/pngwing.com%20(6).png"
     },
     {
       "id": 3,
       "name": "Numerical & Mental Ability",
       "description": "Numbers (arithmetic, percentages, ratios) & logical reasoning",
-      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com (6).png"
+      "icon": "https://raw.githubusercontent.com/SushmitSingh/SushmitSingh.github.io/main/pngwing.com%20(6).png"
     },
     {
       "id": 4,
       "name": "Reasoning",
       "description": "Analytical, verbal, and non-verbal reasoning skills",
-      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com (8).png"
+      "icon": "https://raw.githubusercontent.com/SushmitSingh/SushmitSingh.github.io/main/pngwing.com%20(8).png"
     },
     {
       "id": 5,
       "name": "Current Affairs",
       "description": "National & international news and events",
-      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/cf.png"
+      "icon": "https://raw.githubusercontent.com/SushmitSingh/SushmitSingh.github.io/main/cf.png"
     },
     {
       "id": 6,
       "name": "General Science",
       "description": "Basic Physics, Chemistry, and Biology",
-      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/gs.png"
+      "icon": "https://raw.githubusercontent.com/SushmitSingh/SushmitSingh.github.io/main/gs.png"
     },
     {
       "id": 7,
       "name": "Indian History",
       "description": "Important events, periods, and figures",
-      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/gk.png"
+      "icon": "https://raw.githubusercontent.com/SushmitSingh/SushmitSingh.github.io/main/gk.png"
     },
     {
       "id": 8,
       "name": "Indian Geography",
       "description": "States, rivers, mountains, etc.",
-      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com (6).png"
+      "icon": "https://raw.githubusercontent.com/SushmitSingh/SushmitSingh.github.io/main/pngwing.com%20(6).png"
     },
     {
       "id": 9,
       "name": "Indian Polity",
       "description": "Constitution, government structure, political system",
-      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/poli.png"
+      "icon": "https://raw.githubusercontent.com/SushmitSingh/SushmitSingh.github.io/main/poli.png"
     },
     {
       "id": 10,
       "name": "Indian Economy",
       "description": "Basic concepts & current affairs",
-      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com.png"
+      "icon": "https://raw.githubusercontent.com/SushmitSingh/SushmitSingh.github.io/main/pngwing.com.png"
     },
     {
       "id": 11,
       "name": "Indian Culture",
       "description": "Traditions, festivals, and heritage",
-      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com.png"
+      "icon": "https://raw.githubusercontent.com/SushmitSingh/SushmitSingh.github.io/main/pngwing.com.png"
     }
   ]
