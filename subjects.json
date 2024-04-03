@@ -3,66 +3,66 @@
       "id": 1,
       "name": "General Knowledge",
       "description": "Indian history, geography, polity, economy, science, current affairs",
-      "icon": "https://vajiramandravi.com/upsc-ias-exam/ncert-books-for-upsc/"
+      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/gk.png"
     },
     {
       "id": 2,
       "name": "General Hindi/Local Language",
       "description": "Language proficiency in Hindi or local language",
-      "icon": "https://www.amazon.in/hindi-grammar-books/s?k=hindi+grammar+books (local language resource)"
+      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com (6).png"
     },
     {
       "id": 3,
       "name": "Numerical & Mental Ability",
       "description": "Numbers (arithmetic, percentages, ratios) & logical reasoning",
-      "icon": "https://www.amazon.in/Agarwal-verbal-non-reasoning-book/dp/B07WCZ7MJ7 (Mental Ability practice tests)"
+      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com (6).png"
     },
     {
       "id": 4,
       "name": "Reasoning",
       "description": "Analytical, verbal, and non-verbal reasoning skills",
-      "icon": "Same as Numerical & Mental Ability"
+      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com (8).png"
     },
     {
       "id": 5,
       "name": "Current Affairs",
       "description": "National & international news and events",
-      "icon": "Newspapers, news websites, government publications"
+      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/cf.png"
     },
     {
       "id": 6,
       "name": "General Science",
       "description": "Basic Physics, Chemistry, and Biology",
-      "icon": "https://ncert.nic.in/ (NCERT Class 10 Science book)"
+      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/gs.png"
     },
     {
       "id": 7,
       "name": "Indian History",
       "description": "Important events, periods, and figures",
-      "icon": "https://ncert.nic.in/ (Indian history reference books)"
+      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/gk.png"
     },
     {
       "id": 8,
       "name": "Indian Geography",
       "description": "States, rivers, mountains, etc.",
-      "icon": "https://ncert.nic.in/ (Indian geography reference books)"
+      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com (6).png"
     },
     {
       "id": 9,
       "name": "Indian Polity",
       "description": "Constitution, government structure, political system",
-      "icon": "https://www.amazon.in/indian-polity-by-laxmikanth/s?k=indian+polity+by+laxmikanth (Constitution of India)"
+      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/poli.png"
     },
     {
       "id": 10,
       "name": "Indian Economy",
       "description": "Basic concepts & current affairs",
-      "icon": "https://www.amazon.com/Sanjeev-Sanyal/e/B001NV0VCW (Government economic reports & news)"
+      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com.png"
     },
     {
       "id": 11,
       "name": "Indian Culture",
       "description": "Traditions, festivals, and heritage",
-      "icon": "https://www.amazon.in/Cultural-Heritage-India-Haridas-Bhattacharyya/dp/8187332050 (Websites on Indian culture)"
+      "icon": "https://github.com/SushmitSingh/SushmitSingh.github.io/blob/877b013c49e92ecdcdd40d1878edd524b76e5e06/pngwing.com.png"
     }
   ]
