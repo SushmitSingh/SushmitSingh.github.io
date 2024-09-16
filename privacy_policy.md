@@ -46,6 +46,14 @@ With your prior permission, we may collect:
 
 You can enable or disable access to this information at any time through your device settings.
 
+### Use of Location Data
+We collect location data for the following purposes:
+- **To provide location-based services**: We use your location data to offer personalized and location-specific content, services, or information.
+- **To enhance user experience**: Location data helps us improve the overall user experience by providing more relevant recommendations or suggestions.
+- **To improve service functionality**: Knowing your location allows us to optimize features such as map-based tools, location-specific notifications, and other related functions.
+
+Your location data is only used as necessary for these purposes, and we do not share it with third parties without your explicit consent, unless required for legal or security reasons.
+
 ### Use of Your Personal Data
 The Company may use personal data for the following purposes:
 - **To provide and maintain our Service**
