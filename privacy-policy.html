@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Alarm Jail</title>
-    <meta name="description" content="Privacy Policy for Alarm Jail: Anti-Oversleep Heavy Sleeper Clock and Challenge Protocol.">
+    <title>Privacy Policy - NetTerm | ToonCoder</title>
+    <meta name="description" content="Official Privacy Policy for NetTerm (com.tooncoder.netterm) by ToonCoder. Complete disclosure of local VpnService, zero-telemetry architecture, and data safety compliance.">
+    <meta name="author" content="ToonCoder / Sushmit Singh">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-body: #0a0c10;
-            --bg-card: #121620;
-            --bg-card-subtle: #171d2b;
-            --border-color: #232c3d;
-            --border-highlight: #ff2a6d;
-            --primary: #ff2a6d;
-            --primary-glow: rgba(255, 42, 109, 0.25);
-            --secondary: #00f0ff;
-            --accent-green: #05d554;
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --text-subtle: #64748b;
-            --code-bg: #07090e;
+            --bg-body: #070B11;
+            --bg-card: #0D131E;
+            --bg-card-alt: #111A29;
+            --border-subtle: #1C2B3F;
+            --border-accent: #00FF66;
+            --text-primary: #F0F4F8;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --accent-green: #00FF66;
+            --accent-cyan: #00E5FF;
+            --accent-yellow: #FFD600;
+            --accent-red: #FF4B4B;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-mono: 'Fira Code', monospace;
         }
 
         * {
@@ -32,527 +34,589 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-body);
-            color: var(--text-main);
+            color: var(--text-primary);
+            font-family: var(--font-main);
             line-height: 1.7;
-            padding: 0;
-            margin: 0;
-            background-image: 
-                radial-gradient(circle at 15% 10%, rgba(255, 42, 109, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 85% 60%, rgba(0, 240, 255, 0.06) 0%, transparent 45%),
-                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-            background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 880px;
-            margin: 0 auto;
-            padding: 48px 24px 80px;
+        /* Ambient Glow Effect */
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1000px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 229, 255, 0.08) 0%, rgba(0, 255, 102, 0.04) 40%, rgba(7, 11, 17, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
         }
 
-        /* Header */
         header {
-            margin-bottom: 48px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            background: rgba(7, 11, 17, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 100;
+            padding: 16px 24px;
+        }
+
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-badge {
+            width: 40px;
+            height: 40px;
+            background: #0B131E;
+            border: 1.5px solid var(--accent-green);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            color: var(--accent-green);
+            font-size: 18px;
+            box-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
+        }
+
+        .brand-title {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-subtitle {
+            font-size: 11px;
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color 0.2s;
+            margin-left: 20px;
+        }
+
+        .header-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        main {
+            position: relative;
+            max-width: 900px;
+            margin: 40px auto 80px;
+            padding: 0 24px;
+            z-index: 1;
+        }
+
+        .hero-banner {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 36px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 250px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 102, 0.05));
+            pointer-events: none;
         }
 
         .badge-row {
             display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
             flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
         }
 
-        .pill-badge {
+        .pill {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            padding: 6px 14px;
-            border-radius: 9999px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.06em;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            font-family: var(--font-mono);
             text-transform: uppercase;
-            background: rgba(255, 42, 109, 0.12);
-            color: var(--primary);
-            border: 1px solid rgba(255, 42, 109, 0.35);
         }
 
-        .pill-badge.cyan {
-            background: rgba(0, 240, 255, 0.1);
-            color: var(--secondary);
-            border: 1px solid rgba(0, 240, 255, 0.3);
+        .pill-green {
+            background: rgba(0, 255, 102, 0.12);
+            color: var(--accent-green);
+            border: 1px solid rgba(0, 255, 102, 0.3);
+        }
+
+        .pill-cyan {
+            background: rgba(0, 229, 255, 0.12);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+        }
+
+        .pill-yellow {
+            background: rgba(255, 214, 0, 0.12);
+            color: var(--accent-yellow);
+            border: 1px solid rgba(255, 214, 0, 0.3);
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 32px;
             font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.2;
+            letter-spacing: -1px;
             margin-bottom: 12px;
-            background: linear-gradient(135deg, #ffffff 30%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            line-height: 1.25;
         }
 
-        .app-meta {
-            color: var(--text-muted);
+        .hero-desc {
             font-size: 15px;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            color: var(--text-secondary);
+            max-width: 720px;
         }
 
-        .app-meta strong {
-            color: var(--text-main);
-        }
-
-        /* Quick Navigation Bar */
-        .toc-box {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 40px;
-        }
-
-        .toc-box h3 {
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--secondary);
-            margin-bottom: 16px;
-        }
-
-        .toc-grid {
+        .meta-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px 16px;
-            font-size: 14px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-subtle);
         }
 
-        .toc-grid a {
+        .meta-item {
+            font-size: 13px;
+        }
+
+        .meta-label {
             color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-family: var(--font-mono);
         }
 
-        .toc-grid a:hover {
-            color: var(--primary);
+        .meta-val {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-family: var(--font-mono);
         }
 
-        /* Content Sections */
-        section {
+        .content-card {
             background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 36px 32px;
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 30px;
             margin-bottom: 28px;
-            position: relative;
         }
 
         h2 {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
-            letter-spacing: -0.01em;
-            color: #ffffff;
-            margin-bottom: 18px;
+            color: var(--accent-green);
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 12px;
-        }
-
-        h2::before {
-            content: '';
-            display: inline-block;
-            width: 4px;
-            height: 22px;
-            background: var(--primary);
-            border-radius: 2px;
+            gap: 10px;
+            letter-spacing: -0.3px;
         }
 
         h3 {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 600;
-            color: #e2e8f0;
-            margin: 24px 0 10px;
+            color: var(--text-primary);
+            margin: 20px 0 10px;
         }
 
         p {
-            color: var(--text-muted);
-            margin-bottom: 16px;
-            font-size: 15px;
+            color: var(--text-secondary);
+            font-size: 14.5px;
+            margin-bottom: 14px;
         }
 
         p strong {
-            color: #ffffff;
+            color: var(--text-primary);
         }
 
         ul, ol {
-            padding-left: 20px;
-            color: var(--text-muted);
-            margin-bottom: 18px;
-            font-size: 15px;
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 14.5px;
         }
 
         li {
             margin-bottom: 8px;
         }
 
-        li strong {
-            color: #f8fafc;
-        }
-
-        /* Permission table */
-        .permission-card {
-            background: var(--bg-card-subtle);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
+        .callout-box {
+            background: var(--bg-card-alt);
+            border-left: 4px solid var(--accent-cyan);
+            border-radius: 0 10px 10px 0;
             padding: 16px 20px;
-            margin-bottom: 14px;
+            margin: 18px 0;
         }
 
-        .perm-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 6px;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .perm-code {
-            font-family: 'JetBrains Mono', monospace;
+        .callout-title {
+            color: var(--accent-cyan);
+            font-weight: 700;
             font-size: 13px;
-            color: var(--secondary);
-            font-weight: 700;
-        }
-
-        .perm-tag {
-            font-size: 11px;
-            font-weight: 700;
+            font-family: var(--font-mono);
             text-transform: uppercase;
-            padding: 3px 8px;
-            border-radius: 6px;
-            background: rgba(5, 213, 84, 0.15);
-            color: var(--accent-green);
-        }
-
-        .perm-tag.opt {
-            background: rgba(255, 184, 0, 0.15);
-            color: #ffb800;
-        }
-
-        .perm-desc {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin: 0;
-        }
-
-        /* Callout Box */
-        .callout {
-            border-left: 4px solid var(--secondary);
-            background: rgba(0, 240, 255, 0.05);
-            padding: 18px 20px;
-            border-radius: 0 12px 12px 0;
-            margin: 20px 0;
-        }
-
-        .callout p {
-            margin: 0;
-            color: #e2e8f0;
-            font-size: 14px;
-        }
-
-        /* Links */
-        a {
-            color: var(--secondary);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-        }
-
-        a:hover {
-            color: #5ff5ff;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 60px;
-            padding-top: 32px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            color: var(--text-subtle);
-            font-size: 13px;
-        }
-
-        footer p {
             margin-bottom: 6px;
+        }
+
+        .callout-box p {
+            margin-bottom: 0;
+            font-size: 13.5px;
+        }
+
+        .highlight-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13.5px;
+        }
+
+        .highlight-table th, .highlight-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .highlight-table th {
+            background: var(--bg-card-alt);
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .highlight-table td {
+            color: var(--text-secondary);
+        }
+
+        .highlight-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .code-tag {
+            background: #182234;
+            color: var(--accent-cyan);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 12.5px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 40px 24px;
+            text-align: center;
+            color: var(--text-muted);
             font-size: 13px;
+        }
+
+        footer a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 640px) {
-            h1 { font-size: 30px; }
-            section { padding: 24px 20px; }
-            .container { padding: 32px 16px 60px; }
+            h1 { font-size: 24px; }
+            .hero-banner { padding: 24px; }
+            .content-card { padding: 20px; }
+            .header-container { flex-direction: column; gap: 12px; align-items: flex-start; }
+            .header-links { display: flex; flex-wrap: wrap; gap: 12px; }
+            .header-links a { margin-left: 0; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+    <div class="ambient-glow"></div>
+
     <header>
-        <div class="badge-row">
-            <span class="pill-badge">Official Legal Notice</span>
-            <span class="pill-badge cyan">Google Play & AdMob Compliant</span>
-        </div>
-        <h1>Privacy Policy</h1>
-        <div class="app-meta">
-            <div><strong>Application:</strong> Alarm Jail (Anti-Oversleep Clock)</div>
-            <div><strong>Package ID:</strong> <code>com.tooncoder.alarmjail</code></div>
-            <div><strong>Effective Date:</strong> October 19, 2026</div>
+        <div class="header-container">
+            <a href="#" class="brand-logo">
+                <div class="logo-badge">&gt;_</div>
+                <div>
+                    <div class="brand-title">NetTerm</div>
+                    <div class="brand-subtitle">ToonCoder Privacy Portal</div>
+                </div>
+            </a>
+            <div class="header-links">
+                <a href="#vpn-disclosure">VPN Architecture</a>
+                <a href="#data-collection">Data Policy</a>
+                <a href="#permissions">Permissions</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </header>
 
-    <div class="toc-box">
-        <h3>Table of Contents</h3>
-        <div class="toc-grid">
-            <a href="#overview">1. Overview & Core Philosophy</a>
-            <a href="#data-collection">2. Information Collection</a>
-            <a href="#permissions">3. Android Permissions & Rationale</a>
-            <a href="#admob">4. Google AdMob & Third-Party Ads</a>
-            <a href="#billing">5. In-App Purchases & Billing</a>
-            <a href="#retention">6. Data Retention & Deletion</a>
-            <a href="#children">7. Children's Privacy (COPPA)</a>
-            <a href="#security">8. Data Security</a>
-            <a href="#contact">9. Developer Contact</a>
-        </div>
-    </div>
+    <main>
 
-    <!-- 1. Overview -->
-    <section id="overview">
-        <h2>1. Overview & Core Philosophy</h2>
-        <p>
-            Welcome to <strong>Alarm Jail</strong> ("we", "our", or "the App"), developed by <strong>ToonCoder</strong>. 
-            Alarm Jail is an anti-oversleep utility alarm clock engineered specifically for heavy sleepers, featuring wake-up puzzle missions, volume lock protocols, and a multi-layer fail-safe architecture.
-        </p>
-        <p>
-            We take user privacy exceptionally seriously. <strong>Alarm Jail does not collect, sell, or rent your personal information.</strong> 
-            We do not require you to create an account, log in, or transmit private details such as your name, email address, contacts, or calendar schedules to any cloud server. 
-            Your alarm configurations, custom schedules, habit streaks, and mission progress stay 100% locally on your physical device.
-        </p>
-    </section>
-
-    <!-- 2. Data Collection -->
-    <section id="data-collection">
-        <h2>2. Information Collection & Usage</h2>
-        
-        <h3>2.1 Data Handled Exclusively On-Device (Zero Remote Uploads)</h3>
-        <p>
-            The following data is created during your use of Alarm Jail and is stored strictly within your device's private, encrypted internal storage (SQLite / Jetpack Room / EncryptedSharedPreferences):
-        </p>
-        <ul>
-            <li><strong>Alarm Schedules & Settings:</strong> Alarm trigger times, repeat days, custom labels, and vibration patterns.</li>
-            <li><strong>Disarm Mission Preferences:</strong> Selected challenges (Math equations, Typing tests, Timed Hard mode, Missing letter, Memory match, etc.).</li>
-            <li><strong>Wake Analytics & Streaks:</strong> Weekly/monthly wake timestamps, disarm response speeds, and consecutive consistency streaks displayed in your Briefing screen.</li>
-        </ul>
-        <p>
-            This data is never sent to any remote servers, cloud databases, or third parties.
-        </p>
-
-        <h3>2.2 Automatically Collected Diagnostic & Advertising Data</h3>
-        <p>
-            To provide the App for free and diagnose stability issues, Alarm Jail incorporates industry-standard Google Play Services and <strong>Google AdMob SDK</strong>. 
-            These SDKs may collect pseudonymous and non-personal diagnostic metrics, such as:
-        </p>
-        <ul>
-            <li>Device model, manufacturer, and operating system version (e.g. Android 14/15/16).</li>
-            <li>General, non-precise location inferred from IP address (country or city level, for ad localization and language rendering).</li>
-            <li>Google Advertising Identifier (GAID), which can be reset or opted-out by you at any time in Android system settings.</li>
-            <li>App performance logs, crash stack traces, and ad interaction metrics (e.g., ad impressions and clicks).</li>
-        </ul>
-    </section>
-
-    <!-- 3. Permissions -->
-    <section id="permissions">
-        <h2>3. Android Permissions & Technical Rationale</h2>
-        <p>
-            To guarantee that alarms trigger reliably without failure under Android Doze mode, aggressive OEM battery management, and screen-lock states, Alarm Jail requests the following specific permissions:
-        </p>
-
-        <div class="permission-card">
-            <div class="perm-header">
-                <span class="perm-code">SCHEDULE_EXACT_ALARM & USE_EXACT_ALARM</span>
-                <span class="perm-tag">Core Utility</span>
+        <section class="hero-banner">
+            <div class="badge-row">
+                <span class="pill pill-green">✓ Google Play Compliant</span>
+                <span class="pill pill-cyan">✓ 100% Local Loopback</span>
+                <span class="pill pill-yellow">✓ Zero-Telemetry Guarantee</span>
             </div>
-            <p class="perm-desc">
-                Mandatory for Android 12+ (API 31+) to guarantee your alarms fire at the exact second scheduled, bypassing Doze mode batching and power-saving delays.
+            <h1>Privacy Policy for NetTerm</h1>
+            <p class="hero-desc">
+                Welcome to NetTerm. We engineered NetTerm under a strict <strong>100% Local, Zero-Telemetry</strong> philosophy. Your network packets, URL logs, DNS lookups, and device analytics belong solely to you and never leave your hardware.
             </p>
-        </div>
-
-        <div class="permission-card">
-            <div class="perm-header">
-                <span class="perm-code">FOREGROUND_SERVICE & FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>
-                <span class="perm-tag">Core Utility</span>
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <div class="meta-label">Application</div>
+                    <div class="meta-val">NetTerm</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Package Name</div>
+                    <div class="meta-val">com.tooncoder.netterm</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Developer</div>
+                    <div class="meta-val">ToonCoder / Sushmit Singh</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Effective Date</div>
+                    <div class="meta-val">October 22, 2026</div>
+                </div>
             </div>
-            <p class="perm-desc">
-                Allows the alarm siren audio to continue playing continuously and reliably while presenting full-screen interactive disarm missions without being killed by the Android OS.
-            </p>
-        </div>
+        </section>
 
-        <div class="permission-card">
-            <div class="perm-header">
-                <span class="perm-code">USE_FULL_SCREEN_INTENT & SYSTEM_ALERT_WINDOW</span>
-                <span class="perm-tag">Core Utility</span>
-            </div>
-            <p class="perm-desc">
-                Allows Alarm Jail to immediately display the emergency wake-up and challenge screen directly over your lock screen and on top of any active background apps when an alarm triggers.
-            </p>
-        </div>
-
-        <div class="permission-card">
-            <div class="perm-header">
-                <span class="perm-code">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</span>
-                <span class="perm-tag">Reliability Layer</span>
-            </div>
-            <p class="perm-desc">
-                Used to request an exemption from OEM battery killers (Samsung, Xiaomi, OnePlus, Huawei, etc.) so that background alarms are never silenced unexpectedly.
-            </p>
-        </div>
-
-        <div class="permission-card">
-            <div class="perm-header">
-                <span class="perm-code">ACCESS_NOTIFICATION_POLICY</span>
-                <span class="perm-tag">Emergency Override</span>
-            </div>
-            <p class="perm-desc">
-                Allows emergency alarms to bypass Do Not Disturb (DND) modes when you explicitly enable the emergency volume lock feature.
-            </p>
-        </div>
-
-        <div class="permission-card">
-            <div class="perm-header">
-                <span class="perm-code">RECEIVE_BOOT_COMPLETED & QUICKBOOT_POWERON</span>
-                <span class="perm-tag">Auto-Recovery</span>
-            </div>
-            <p class="perm-desc">
-                Ensures all scheduled upcoming alarms are automatically recalculated and re-registered with the Android AlarmManager immediately after your phone restarts.
-            </p>
-        </div>
-
-        <div class="permission-card">
-            <div class="perm-header">
-                <span class="perm-code">CAMERA, SENSORS, & NFC (Optional Missions)</span>
-                <span class="perm-tag opt">Optional Disarm Missions</span>
-            </div>
-            <p class="perm-desc">
-                Only requested if you choose to activate specific physical disarm missions (such as Step Counter, Shake, QR Code, or NFC scan). 
-                <strong>Crucial note:</strong> Sensor data and camera frames are processed 100% locally on-device in real-time. No photos or sensor streams are ever recorded, saved to your gallery, or uploaded to any server.
-            </p>
-        </div>
-    </section>
-
-    <!-- 4. AdMob -->
-    <section id="admob">
-        <h2>4. Google AdMob & Third-Party Advertising</h2>
-        <p>
-            Alarm Jail uses <strong>Google AdMob</strong> (provided by Google LLC) to display advertisements (banner and rewarded ads).
-        </p>
-        <p>
-            AdMob may use cookies, device identifiers, and the Google Advertising ID (GAID) to deliver personalized or non-personalized advertisements based on applicable regional laws (such as GDPR in Europe or CCPA in California).
-        </p>
-        
-        <div class="callout">
+        <!-- SECTION 1: INTRODUCTION -->
+        <article class="content-card">
+            <h2>1. Introduction &amp; Core Principles</h2>
             <p>
-                <strong>IAB app-ads.txt Authorization:</strong><br>
-                Alarm Jail strictly adheres to the Interactive Advertising Bureau (IAB) <code>app-ads.txt</code> standard to protect advertiser integrity and eliminate counterfeit ad inventory. 
-                Our authorized seller record is published publicly at: 
-                <a href="app-ads.txt"><code>/app-ads.txt</code></a>.
+                This Privacy Policy governs the manner in which <strong>ToonCoder</strong> ("we", "our", or "us") manages and protects the data handled by the <strong>NetTerm</strong> Android mobile application (Package ID: <code class="code-tag">com.tooncoder.netterm</code>).
             </p>
-        </div>
+            <p>
+                NetTerm is an advanced, hardware-level network traffic inspector, real-time URL sniffer, and local DNS sinkhole firewall designed for developers, network engineers, system administrators, and security-conscious individuals.
+            </p>
+            <p>
+                Our foundational guarantee is straightforward: <strong>NetTerm operates strictly on-device. We do NOT operate remote proxy servers, remote VPN gateways, or cloud databases. We do NOT harvest, sell, analyze, or monetize your network traffic or personal information.</strong>
+            </p>
+        </article>
 
-        <p>
-            To understand how Google processes ad data, please review:
-        </p>
-        <ul>
-            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy & Terms Policy</a></li>
-            <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use our services</a></li>
-        </ul>
-        <p>
-            <strong>Your Ad Choices:</strong> You can opt out of interest-based ads or reset your advertising ID at any time through your Android device settings under <strong>Settings &rarr; Google &rarr; Ads &rarr; Delete advertising ID</strong> or <strong>Reset advertising ID</strong>.
-        </p>
-    </section>
+        <!-- SECTION 2: VPNSERVICE POLICY DISCLOSURE (CRITICAL FOR GOOGLE PLAY) -->
+        <article class="content-card" id="vpn-disclosure">
+            <h2>2. Android VpnService Disclosure &amp; Architecture</h2>
+            <div class="callout-box">
+                <div class="callout-title">Google Play VpnService Compliance Declaration</div>
+                <p>
+                    NetTerm utilizes Android's official <code class="code-tag">android.net.VpnService</code> API solely to establish an internal, loopback virtual network interface (<code class="code-tag">tun0</code>) on your local device. <strong>No remote VPN servers exist. Your internet traffic is NOT redirected to external servers.</strong>
+                </p>
+            </div>
+            <h3>Why NetTerm Uses VpnService:</h3>
+            <ul>
+                <li><strong>Local Packet Header Inspection:</strong> To read local IP, TCP, UDP, HTTP, HTTPS (TLS Server Name Indication), and DNS packet headers directly on your device without requiring root access.</li>
+                <li><strong>Hardware Wire-Speed Bypass:</strong> NetTerm implements <code class="code-tag">allowBypass()</code> so that non-DNS/non-intercepted payload data flows directly to your actual network gateway with 0% bottleneck and full wire speed.</li>
+                <li><strong>Local DNS Sinkholing (Firewall):</strong> When you block data-hogging domains or advertising trackers, NetTerm's local DNS engine resolves them to <code class="code-tag">0.0.0.0</code> locally on your phone, blocking requests before cellular data is spent.</li>
+            </ul>
+            <p>
+                <strong>Zero Remote Tunneling:</strong> Unlike commercial VPN providers that route your traffic through remote overseas data centers, NetTerm acts as a local packet filter. Your packets travel directly from your phone to your destination network.
+            </p>
+        </article>
 
-    <!-- 5. In-App Purchases -->
-    <section id="billing">
-        <h2>5. In-App Purchases & Subscriptions</h2>
-        <p>
-            Alarm Jail may offer optional in-app purchases or subscriptions (such as Alarm Jail Pro, ad-free experience, or premium challenge packs).
-        </p>
-        <p>
-            All monetary transactions and billing are handled directly by the <strong>Google Play Billing API</strong>. 
-            We do not receive, store, or process any payment card details, bank information, or billing addresses. 
-            All billing is governed by the <a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a>.
-        </p>
-    </section>
+        <!-- SECTION 3: ZERO-TELEMETRY & DATA COLLECTION -->
+        <article class="content-card" id="data-collection">
+            <h2>3. Information We Collect &amp; Zero-Telemetry Policy</h2>
+            <p>
+                We do not collect any personal, demographic, or usage information:
+            </p>
+            <table class="highlight-table">
+                <thead>
+                    <tr>
+                        <th>Data Category</th>
+                        <th>Collected by Us?</th>
+                        <th>Where It Stays</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Personal Information (Name, Email, Phone)</strong></td>
+                        <td><span style="color: var(--accent-green); font-weight: 700;">NO</span></td>
+                        <td>Never requested or collected</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Browsing &amp; App Activity Logs</strong></td>
+                        <td><span style="color: var(--accent-green); font-weight: 700;">NO</span></td>
+                        <td>In-memory on phone RAM only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DNS Queries &amp; URLs Inspected</strong></td>
+                        <td><span style="color: var(--accent-green); font-weight: 700;">NO</span></td>
+                        <td>Local device SQLite/Preferences</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hardware / Device Identifiers (IMEI, MAC)</strong></td>
+                        <td><span style="color: var(--accent-green); font-weight: 700;">NO</span></td>
+                        <td>Never accessed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Location Data (GPS / Coarse)</strong></td>
+                        <td><span style="color: var(--accent-green); font-weight: 700;">NO</span></td>
+                        <td>Never requested</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Real-Time Bandwidth Stats</strong></td>
+                        <td><span style="color: var(--accent-green); font-weight: 700;">NO</span></td>
+                        <td>Local TrafficStats API</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
 
-    <!-- 6. Retention -->
-    <section id="retention">
-        <h2>6. Data Retention & Deletion</h2>
-        <p>
-            Because we do not store your data on remote servers, you have complete control over your information at all times:
-        </p>
-        <ul>
-            <li><strong>Delete within App:</strong> You can edit or delete individual alarms and reset streak statistics directly within the app interface.</li>
-            <li><strong>Clear App Storage:</strong> You can permanently wipe all local database records by going to Android Settings &rarr; Apps &rarr; Alarm Jail &rarr; Storage &rarr; Clear Data.</li>
-            <li><strong>Uninstalling the App:</strong> Uninstalling Alarm Jail automatically purges all stored databases, configurations, and cached files from your device.</li>
-        </ul>
-    </section>
+        <!-- SECTION 4: LOCAL DATA STORAGE -->
+        <article class="content-card">
+            <h2>4. Local Storage &amp; User Control</h2>
+            <p>
+                Any data generated by NetTerm—including session bandwidth logs, blocked URL lists, and onboarding acknowledgments—is stored in your device's sandboxed private storage directory:
+            </p>
+            <ul>
+                <li><strong>Log Storage:</strong> Live URL inspection entries are retained in an in-memory cyclic buffer (last 500 entries) and discarded upon service stop.</li>
+                <li><strong>Calendar Historical Aggregates:</strong> Daily data usage counters are stored locally in Android's encrypted app storage.</li>
+                <li><strong>Immediate Deletion:</strong> You have full control to clear all session logs and statistics at any time via the <em>⚡ Hub -&gt; Clear Logs</em> button, or by clearing app data in Android Settings.</li>
+            </ul>
+        </article>
 
-    <!-- 7. Children's Privacy -->
-    <section id="children">
-        <h2>7. Children's Privacy (COPPA Compliance)</h2>
-        <p>
-            Alarm Jail is designed for general audiences and is not directed at children under the age of 13 (or under 16 in the European Union). 
-            We do not knowingly collect personal identifiable information from children. If you believe a child has provided us with personal data, please contact us immediately so we can take appropriate measures.
-        </p>
-    </section>
+        <!-- SECTION 5: PERMISSIONS EXPLAINED -->
+        <article class="content-card" id="permissions">
+            <h2>5. Transparent Device Permissions</h2>
+            <p>NetTerm requests only permissions essential to its core networking and diagnostic functions:</p>
+            <table class="highlight-table">
+                <thead>
+                    <tr>
+                        <th>Permission</th>
+                        <th>Exact Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="code-tag">android.net.VpnService</code></td>
+                        <td>Creates the local loopback interface for real-time packet inspection and DNS sinkhole firewalling.</td>
+                    </tr>
+                    <tr>
+                        <td><code class="code-tag">POST_NOTIFICATIONS</code></td>
+                        <td>Required on Android 13+ to display the ongoing foreground service and real-time status bar internet speed meter.</td>
+                    </tr>
+                    <tr>
+                        <td><code class="code-tag">SYSTEM_ALERT_WINDOW</code></td>
+                        <td>Optional. Allows displaying the floating mini-terminal HUD over other apps when explicitly enabled by you.</td>
+                    </tr>
+                    <tr>
+                        <td><code class="code-tag">RECEIVE_BOOT_COMPLETED</code></td>
+                        <td>Allows NetTerm to automatically restore the status bar speed indicator upon device reboot if enabled.</td>
+                    </tr>
+                    <tr>
+                        <td><code class="code-tag">QUERY_ALL_PACKAGES</code></td>
+                        <td>Used strictly on-device to map intercepted UID connection streams to user-friendly app names and icons.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
 
-    <!-- 8. Security -->
-    <section id="security">
-        <h2>8. Data Security</h2>
-        <p>
-            We implement standard operating system security protections provided by Android, including application sandboxing and secure file storage, to prevent unauthorized access to local app files. 
-            All external network traffic for ads or billing utilizes encrypted HTTPS (Transport Layer Security - TLS).
-        </p>
-    </section>
+        <!-- SECTION 6: ADVERTISING & ADMOB -->
+        <article class="content-card">
+            <h2>6. Advertising &amp; Third-Party Services</h2>
+            <p>
+                NetTerm may display contextual banner or interstitial advertisements provided by Google AdMob to support ongoing independent software development.
+            </p>
+            <p>
+                Google AdMob operates in compliance with Google Play Developer Policies and may use anonymized advertising identifiers (Google Advertising ID) for ad delivery and fraud prevention in accordance with Google's Privacy Policy.
+            </p>
+            <div class="callout-box">
+                <div class="callout-title">Authorized Digital Sellers (IAB app-ads.txt)</div>
+                <p>
+                    In accordance with the Interactive Advertising Bureau (IAB) OpenRTB specifications, ToonCoder maintains official digital seller records at:
+                    <br>
+                    <a href="https://sushmitsingh.github.io/app-ads.txt" target="_blank" style="color: var(--accent-cyan); font-family: var(--font-mono);">https://sushmitsingh.github.io/app-ads.txt</a>
+                </p>
+            </div>
+        </article>
 
-    <!-- 9. Contact -->
-    <section id="contact">
-        <h2>9. Developer & Contact Information</h2>
-        <p>
-            If you have questions, feedback, or concerns regarding this Privacy Policy or the data practices of Alarm Jail, please contact:
-        </p>
-        <ul>
-            <li><strong>Application:</strong> Alarm Jail</li>
-            <li><strong>Developer:</strong> ToonCoder Team</li>
-            <li><strong>Email:</strong> <a href="mailto:sushmit.singh@gmail.com">sushmit.singh@gmail.com</a></li>
-            <li><strong>Website:</strong> <a href="https://tooncoder.github.io/">https://tooncoder.github.io/</a></li>
-        </ul>
-    </section>
+        <!-- SECTION 7: GDPR & CCPA COMPLIANCE -->
+        <article class="content-card">
+            <h2>7. GDPR (Europe) &amp; CCPA (California) Compliance</h2>
+            <p>
+                Because NetTerm does not collect, store, transmit, or sell personal data on remote servers:
+            </p>
+            <ul>
+                <li><strong>Right to Access:</strong> All data is viewable in real-time directly on your phone's screen.</li>
+                <li><strong>Right to Erasure (Forget):</strong> You can wipe all stored records instantly by clearing app data or uninstalling the app.</li>
+                <li><strong>No Sale of Data:</strong> We do not sell, rent, or trade your personal or network information to any third party under any circumstance.</li>
+            </ul>
+        </article>
+
+        <!-- SECTION 8: CHILDREN'S PRIVACY -->
+        <article class="content-card">
+            <h2>8. Children's Online Privacy Protection (COPPA)</h2>
+            <p>
+                NetTerm is a technical diagnostic utility intended for developers and general users. We do not knowingly solicit or collect data from children under the age of 13. Because our service collects zero personal information, no child's data is ever gathered or stored.
+            </p>
+        </article>
+
+        <!-- SECTION 9: POLICY UPDATES -->
+        <article class="content-card">
+            <h2>9. Updates to This Privacy Policy</h2>
+            <p>
+                We may periodically update this Privacy Policy to reflect technical enhancements or regulatory changes. Any modifications will be posted to this official URL with an updated Effective Date. Continued use of NetTerm constitutes your acknowledgment of the updated policy.
+            </p>
+        </article>
+
+        <!-- SECTION 10: CONTACT -->
+        <article class="content-card" id="contact">
+            <h2>10. Developer Contact Information</h2>
+            <p>
+                If you have questions, inquiries, or feedback regarding NetTerm's privacy practices, local VPN architecture, or data safety compliance, please contact us:
+            </p>
+            <div style="background: var(--bg-card-alt); padding: 18px; border-radius: 8px; border: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 13.5px;">
+                <strong>Developer:</strong> ToonCoder / Sushmit Singh<br>
+                <strong>Website:</strong> <a href="https://sushmitsingh.github.io/" target="_blank" style="color: var(--accent-cyan);">https://sushmitsingh.github.io/</a><br>
+                <strong>GitHub:</strong> <a href="https://github.com/SushmitSingh" target="_blank" style="color: var(--accent-cyan);">https://github.com/SushmitSingh</a><br>
+                <strong>Repository:</strong> <a href="https://github.com/SushmitSingh/SushmitSingh.github.io" target="_blank" style="color: var(--accent-cyan);">SushmitSingh/SushmitSingh.github.io</a>
+            </div>
+        </article>
+
+    </main>
 
     <footer>
-        <p>&copy; 2026 ToonCoder &bull; Alarm Jail Protocol &bull; All Rights Reserved.</p>
-        <p>Compliant with Google Play Developer Program Policies & IAB app-ads.txt Specification.</p>
+        <p>&copy; 2026 ToonCoder. All rights reserved. | Built for <a href="#">NetTerm</a> (com.tooncoder.netterm)</p>
     </footer>
-</div>
 
 </body>
 </html>
