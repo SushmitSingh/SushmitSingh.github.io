@@ -1,24 +1,29 @@
-# Alarm Jail - Official Privacy Policy & AdMob Authorization
+# ToonCoder - Official Privacy Policies & AdMob Verification
 
-This repository hosts the official Privacy Policy and IAB AdMob pp-ads.txt verification for **Alarm Jail** (com.tooncoder.alarmjail).
-
-## 🌐 Live URLs (GitHub Pages)
-
-- **Privacy Policy**: [https://sushmitsingh.github.io/alarm-jail/](https://sushmitsingh.github.io/alarm-jail/)
-- **Alternative Direct Link**: [https://sushmitsingh.github.io/alarm-jail/privacy-policy.html](https://sushmitsingh.github.io/alarm-jail/privacy-policy.html)
-- **AdMob app-ads.txt**: [https://sushmitsingh.github.io/alarm-jail/app-ads.txt](https://sushmitsingh.github.io/alarm-jail/app-ads.txt)
+This repository hosts the official Privacy Policies, Compliance Disclosures, and IAB AdMob `app-ads.txt` verification for apps published by **ToonCoder** (Sushmit Singh).
 
 ---
 
-## 📄 File Inventory
+## 📱 Apps Directory & Live URLs (GitHub Pages)
 
-1. index.html - Responsive, modern, dark-themed Privacy Policy compliant with Google Play Developer Policies and GDPR/CCPA.
-2. privacy-policy.html - Standalone fallback copy of the Privacy Policy.
-3. pp-ads.txt - Interactive Advertising Bureau (IAB) AdMob authorized digital seller verification:
-   `	ext
-   google.com, pub-9041332706784897, DIRECT, f08c47fec0942fa0
-   `
-4. .nojekyll - Bypasses Jekyll processing to serve raw static assets immediately.
+### 1. Police Constable Exam Prep 2026 (`com.tooncoder.policeprep`)
+- **Official Privacy Policy**: [https://sushmitsingh.github.io/policeprep-privacy-policy.html](https://sushmitsingh.github.io/policeprep-privacy-policy.html)
+- **Alternative Direct Link**: [https://sushmitsingh.github.io/police-prep/](https://sushmitsingh.github.io/police-prep/)
+- **Fallback URL**: [https://sushmitsingh.github.io/police-prep/privacy-policy.html](https://sushmitsingh.github.io/police-prep/privacy-policy.html)
+
+### 2. Alarm Jail (`com.tooncoder.alarmjail`)
+- **Privacy Policy**: [https://sushmitsingh.github.io/privacy-policy.html](https://sushmitsingh.github.io/privacy-policy.html)
+- **Direct Link**: [https://sushmitsingh.github.io/index.html](https://sushmitsingh.github.io/index.html)
 
 ---
-© 2026 ToonCoder. All rights reserved.
+
+## 🛡️ AdMob Authorized Digital Seller (`app-ads.txt`)
+- **Live URL**: [https://sushmitsingh.github.io/app-ads.txt](https://sushmitsingh.github.io/app-ads.txt)
+- **IAB Record**:
+  ```text
+  google.com, pub-9041332706784897, DIRECT, f08c47fec0942fa0
+  ```
+
+---
+
+© 2026 ToonCoder (Sushmit Singh). All rights reserved.
